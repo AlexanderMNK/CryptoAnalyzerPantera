@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class ConsoleRunner {
 
     public static void main(String[] args) {
+        // 04:12
         // Осваиваю Git
 
         //build console app
