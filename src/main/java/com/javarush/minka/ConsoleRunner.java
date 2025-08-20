@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class ConsoleRunner {
 
     public static void main(String[] args) {
+        // Шаг 2. Проба.
+
         //build console app
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu(input);
