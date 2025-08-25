@@ -8,5 +8,6 @@ public class ConsoleRunner {
         Scanner input = new Scanner(System.in);
 
         input.nextLine(); // Это чтобы предупреждение не высвечивалось.
+
     }
 }
