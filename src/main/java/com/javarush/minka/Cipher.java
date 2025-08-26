@@ -12,6 +12,7 @@ public class Cipher {
     public void printToConsole() {
         System.out.println(Arrays.toString(alphabet));
     }
+
 //    public String encrypt(String text, int shift) {
 //        // Логика шифрования
 //        return "";

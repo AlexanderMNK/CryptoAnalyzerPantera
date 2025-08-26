@@ -9,5 +9,6 @@ public class ConsoleRunner {
         String ALPHABET = "тут будет наш алфавит";
         Cipher cipher = new Cipher(ALPHABET.toCharArray());
         cipher.printToConsole();
+
     }
 }
