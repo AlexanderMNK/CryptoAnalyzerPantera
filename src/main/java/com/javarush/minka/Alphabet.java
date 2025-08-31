@@ -7,15 +7,21 @@ public class Alphabet {
     private Alphabet() {
     }
 
-    public static final char[] chars = {'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з',
-        'и','к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ',
-        'ъ', 'ы', 'ь', 'э', 'я', '.', ',', '«', '»', '"', '\'', ':', '!', '?', ' ', '\n'};
+    private static final String en = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    private static final String rus = "ЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮ";
+    private static final String numbers = "1234567890";
+    private static final String symbols = "\n.,”’\":;-!? ()<>";
 
-    public final static Map<Character, Integer> index = new HashMap<>();
+    public static final char[] chars = (rus + rus.toLowerCase() +
+            en + en.toLowerCase() +
+            numbers + symbols
+    ).toCharArray();
+
+    public static final Map<Character, Integer> indexLetter = new HashMap<>();
 
     static {
         for (int i = 0; i < chars.length; i++) {
-            index.put(chars[i], i);
+            indexLetter.put(chars[i], i);
         }
     }
 }
