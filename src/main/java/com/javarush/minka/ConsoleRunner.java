@@ -10,6 +10,7 @@ public class ConsoleRunner {
         InputParamsReader inputParamsReader = new InputParamsReader(scanner, filePathBuilder);
         CryptoProcessor cryptoProcessor = new CryptoProcessor();
         CryptoApp cryptoApp = new CryptoApp(cryptoProcessor, menu, inputParamsReader, scanner);
+
         cryptoApp.run();
     }
 }
