@@ -17,7 +17,7 @@ public class InputParamsReader {
     }
 
     public String readInputFile() {
-        System.out.print("Исходный файл по умолчанию для шифрования/дешифрования " + DEFAULT_SOURCE_FILE + " (y/n): ");
+        System.out.print("Исходный файл по умолчанию " + DEFAULT_SOURCE_FILE + " (y/n): ");
         String useDefault = scanner.nextLine();
         if (useDefault.equalsIgnoreCase("y")) {
             return filePathBuilder.buildAbsolutePath(DEFAULT_SOURCE_FILE);
@@ -27,7 +27,7 @@ public class InputParamsReader {
     }
 
     public String readOutputFile() {
-        System.out.print("Результирующий Файл по умолчанию с результатами шифрования/дешифрования " + DEFAULT_OUTPUT_FILE + " (y/n): ");
+        System.out.print("Результирующий Файл по умолчанию " + DEFAULT_OUTPUT_FILE + " (y/n): ");
         String useDefault = scanner.nextLine();
         if (useDefault.equalsIgnoreCase("y")) {
             return filePathBuilder.buildAbsolutePath(DEFAULT_OUTPUT_FILE);
@@ -42,7 +42,7 @@ public class InputParamsReader {
             String input = scanner.nextLine();
             try {
                 return Integer.parseInt(input);
-            } catch (Exception e) {
+            } catch (RuntimeException e) {
                 System.out.print("Введённое значение ключа не корректно. Попробуйте еще раз: ");
             }
         }

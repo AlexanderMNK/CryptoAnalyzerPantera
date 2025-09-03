@@ -1,5 +1,6 @@
 package com.javarush.minka;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class CryptoApp {
@@ -25,7 +26,7 @@ public class CryptoApp {
                 try {
                     cryptoProcessor.encrypt(inputFile, outputFile, key);
                     System.out.println("Шифрование завершено! Результат: " + outputFile);
-                } catch (Exception e) {
+                } catch (RuntimeException | IOException e) {
                     System.out.println("Ошибка: " + e.getMessage());
                 }
             } else if (choice == 2) {
@@ -35,7 +36,7 @@ public class CryptoApp {
                 try {
                     cryptoProcessor.decrypt(inputFile, outputFile, key);
                     System.out.println("Дешифрование завершено! Результат: " + outputFile);
-                } catch (Exception e) {
+                } catch (RuntimeException | IOException e) {
                     System.out.println("Ошибка: " + e.getMessage());
                 }
             } else if (choice == 3) {

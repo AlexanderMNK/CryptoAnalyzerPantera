@@ -14,8 +14,8 @@ public abstract class CryptoAction {
                 char changed = transform(c, key);
                 writer.write(changed);
             }
-        } catch (Exception e) {
-            System.out.println("Что-то пошло не так \uD83E\uDD14 " + e.getMessage());
+        } catch (RuntimeException | IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
