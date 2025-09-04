@@ -9,6 +9,7 @@ public abstract class CryptoAction {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))
         ) {
             int symbol;
+
             while ((symbol = reader.read()) != -1) {
                 char c = (char) symbol;
                 char changed = transform(c, key);

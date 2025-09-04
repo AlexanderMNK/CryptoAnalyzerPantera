@@ -19,10 +19,12 @@ public class CryptoApp {
     public void run() {
         while (true) {
             int choice = menu.showMainMenu(scanner);
+
             if (choice == 1) {
                 String inputFile = inputParamsReader.readInputFile();
                 String outputFile = inputParamsReader.readOutputFile();
                 int key = inputParamsReader.readKey();
+
                 try {
                     cryptoProcessor.encrypt(inputFile, outputFile, key);
                     System.out.println("Шифрование завершено! Результат: " + outputFile);
@@ -33,11 +35,12 @@ public class CryptoApp {
                 String inputFile = inputParamsReader.readInputFile();
                 String outputFile = inputParamsReader.readOutputFile();
                 int key = inputParamsReader.readKey();
+
                 try {
                     cryptoProcessor.decrypt(inputFile, outputFile, key);
                     System.out.println("Дешифрование завершено! Результат: " + outputFile);
                 } catch (RuntimeException | IOException e) {
-                    System.out.println("Ошибка: " + e.getMessage());
+                    System.out.println("Ошибка " + e.getMessage());
                 }
             } else if (choice == 3) {
                 System.out.println("Выход.");
